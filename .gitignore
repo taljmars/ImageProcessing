@@ -19,6 +19,7 @@ bin
 
 # Windows shortcuts
 *.lnk
+*.iml
 
 # =========================
 # Operating System Files
@@ -47,4 +48,5 @@ bin
 .AppleDesktop
 Network Trash Folder
 Temporary Items
+CMpub
 .apdisk
