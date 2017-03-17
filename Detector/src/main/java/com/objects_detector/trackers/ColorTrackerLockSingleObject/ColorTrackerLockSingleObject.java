@@ -1,12 +1,12 @@
-package ObjectsDetector.Trackers.ColorTrackerLockSingleObject;
+package com.objects_detector.trackers.ColorTrackerLockSingleObject;
 
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
-import ObjectsDetector.Trackers.ColorTracker.ColorTracker;
-import ObjectsDetector.Utilities.DetectedObject;
+import com.objects_detector.trackers.ColorTracker.ColorTracker;
+import com.objects_detector.utilities.DetectedObject;
 
 public class ColorTrackerLockSingleObject extends ColorTracker {
 	

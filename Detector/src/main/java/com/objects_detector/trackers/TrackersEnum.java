@@ -1,9 +1,9 @@
-package ObjectsDetector.Trackers;
+package com.objects_detector.trackers;
 
-import ObjectsDetector.Trackers.ColorTracker.ColorTracker;
-import ObjectsDetector.Trackers.ColorTrackerLockSingleObject.ColorTrackerLockSingleObject;
-import ObjectsDetector.Trackers.FakeTracker.FakeTracker;
-import ObjectsDetector.Trackers.MovementTracker.MovmentTracker;
+import com.objects_detector.trackers.ColorTracker.ColorTracker;
+import com.objects_detector.trackers.ColorTrackerLockSingleObject.ColorTrackerLockSingleObject;
+import com.objects_detector.trackers.FakeTracker.FakeTracker;
+import com.objects_detector.trackers.MovementTracker.MovmentTracker;
 
 public enum TrackersEnum {
 	

@@ -1,8 +1,8 @@
-package ObjectsDetector;
+package com.objects_detector;
 
 import org.opencv.core.Mat;
 
-import ObjectsDetector.Utilities.DetectionResults;
+import com.objects_detector.utilities.DetectionResults;
 
 public interface Tracker {
 	

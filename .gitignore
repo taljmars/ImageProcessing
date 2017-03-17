@@ -10,6 +10,7 @@ $RECYCLE.BIN/
 
 #Java
 bin
+target
 
 # Windows Installer files
 *.cab
@@ -20,6 +21,7 @@ bin
 # Windows shortcuts
 *.lnk
 *.iml
+.idea
 
 # =========================
 # Operating System Files

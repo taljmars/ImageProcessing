@@ -1,4 +1,4 @@
-package ObjectsDetector.Trackers.MovementTracker;
+package com.objects_detector.trackers.MovementTracker;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,10 +13,10 @@ import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
-import ObjectsDetector.Tracker;
-import ObjectsDetector.Utilities.DetectedObject;
-import ObjectsDetector.Utilities.DetectionResults;
-import ObjectsDetector.Utilities.Utilities;
+import com.objects_detector.Tracker;
+import com.objects_detector.utilities.DetectedObject;
+import com.objects_detector.utilities.DetectionResults;
+import com.objects_detector.utilities.Utilities;
 
 public class MovmentTracker implements Tracker {
 	

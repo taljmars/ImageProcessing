@@ -1,4 +1,4 @@
-package ObjectsDetector.Utilities;
+package com.objects_detector.utilities;
 
 import java.util.ArrayList;
 import java.util.List;

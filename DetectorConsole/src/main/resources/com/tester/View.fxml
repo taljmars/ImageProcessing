@@ -6,7 +6,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 	
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="Tester.Controller">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.tester.Controller">
 	<right>
 		<VBox alignment="CENTER" spacing="10">
 			<padding>

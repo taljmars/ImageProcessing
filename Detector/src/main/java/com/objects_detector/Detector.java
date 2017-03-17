@@ -1,4 +1,4 @@
-package ObjectsDetector;
+package com.objects_detector;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +10,7 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
 
-import ObjectsDetector.Trackers.FakeTracker.FakeTracker;
+import com.objects_detector.trackers.FakeTracker.FakeTracker;
 
 public class Detector {
 	

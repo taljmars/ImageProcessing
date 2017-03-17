@@ -1,4 +1,4 @@
-package Tester;
+package com.tester;
 
 import org.opencv.core.Scalar;
 import com.objects_detector.Detector;

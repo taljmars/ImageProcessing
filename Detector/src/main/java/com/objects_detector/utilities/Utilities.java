@@ -1,4 +1,4 @@
-package ObjectsDetector.Utilities;
+package com.objects_detector.utilities;
 
 import java.io.ByteArrayInputStream;
 

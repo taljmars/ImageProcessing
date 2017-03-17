@@ -1,6 +1,6 @@
-package ObjectsDetector;
+package com.objects_detector;
 
-import ObjectsDetector.Utilities.DetectionResults;
+import com.objects_detector.utilities.DetectionResults;
 
 public interface ObjectDetectorListener {
 	

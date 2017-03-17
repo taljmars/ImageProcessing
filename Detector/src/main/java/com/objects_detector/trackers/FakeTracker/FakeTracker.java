@@ -1,10 +1,10 @@
-package ObjectsDetector.Trackers.FakeTracker;
+package com.objects_detector.trackers.FakeTracker;
 
 import org.opencv.core.Mat;
 
-import ObjectsDetector.Tracker;
-import ObjectsDetector.Utilities.DetectionResults;
-import ObjectsDetector.Utilities.Utilities;
+import com.objects_detector.Tracker;
+import com.objects_detector.utilities.DetectionResults;
+import com.objects_detector.utilities.Utilities;
 import javafx.scene.image.Image;
 
 public class FakeTracker implements Tracker {
