@@ -1,13 +1,13 @@
 package Tester;
 
 import org.opencv.core.Scalar;
-import ObjectsDetector.Detector;
-import ObjectsDetector.ObjectDetectorListener;
-import ObjectsDetector.Trackers.ColorTracker.ColorTracker;
-import ObjectsDetector.Trackers.ColorTrackerLockSingleObject.ColorTrackerLockSingleObject;
-import ObjectsDetector.Trackers.MovementTracker.MovmentTracker;
-import ObjectsDetector.Utilities.DetectionResults;
-import ObjectsDetector.Utilities.Utilities;
+import com.objects_detector.Detector;
+import com.objects_detector.ObjectDetectorListener;
+import com.objects_detector.trackers.ColorTracker.ColorTracker;
+import com.objects_detector.trackers.ColorTrackerLockSingleObject.ColorTrackerLockSingleObject;
+import com.objects_detector.trackers.MovementTracker.MovmentTracker;
+import com.objects_detector.utilities.DetectionResults;
+import com.objects_detector.utilities.Utilities;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
@@ -140,8 +140,8 @@ public class Controller implements ObjectDetectorListener
 
 	@Override
 	public void handleImageProcessResults(DetectionResults frameProcessResult) {
-		//Utilities.onFXThread(this.maskImage.imageProperty(), frameProcessResult.getMidProcessImages().get(0));
-		//Utilities.onFXThread(this.morphImage.imageProperty(), frameProcessResult.getMidProcessImages().get(1));
+		//utilities.onFXThread(this.maskImage.imageProperty(), frameProcessResult.getMidProcessImages().get(0));
+		//utilities.onFXThread(this.morphImage.imageProperty(), frameProcessResult.getMidProcessImages().get(1));
 		Utilities.onFXThread(this.originalFrame.imageProperty(), frameProcessResult.getFinalImage());
 		if (frameProcessResult.getDetectedObjects().size() != 0)
 			System.err.println(frameProcessResult.getDetectedObjects().get(0).getCenter().toString() + " !! ");
