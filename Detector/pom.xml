@@ -32,7 +32,9 @@
         <dependency>
             <groupId>opencv-310</groupId>
             <artifactId>opencv-310</artifactId>
+            <scope>system</scope>
             <version>RELEASE</version>
+            <systemPath>${project.basedir}/../ExtLib/OpenCV-3.1.0/Linux32/opencv-310.jar</systemPath>
         </dependency>
 
     </dependencies>
