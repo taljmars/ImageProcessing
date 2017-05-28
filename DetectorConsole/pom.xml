@@ -30,12 +30,21 @@
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>javafx</artifactId>
-            <version>RELEASE</version>
-            <scope>system</scope>
-            <systemPath>${java.home}/../../../../local/jdk1.8.0_121/jre/lib/ext/jfxrt.jar</systemPath>
         </dependency>
 
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>javafx</artifactId>
+                <version>RELEASE</version>
+                <scope>system</scope>
+                <systemPath>${java.home}/../../../../local/jdk1.8.0_121/jre/lib/ext/jfxrt.jar</systemPath>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <outputDirectory>../${build.output}/classes/</outputDirectory>
