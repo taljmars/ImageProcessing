@@ -1,7 +1,10 @@
 package com.tester;
 
+import com.objects_detector.detector.VideoSrcDetector;
+import javafx.event.ActionEvent;
+import org.opencv.core.Mat;
 import org.opencv.core.Scalar;
-import com.objects_detector.Detector;
+import com.objects_detector.detector.StreamDetector;
 import com.objects_detector.ObjectDetectorListener;
 import com.objects_detector.trackers.ColorTracker.ColorTracker;
 import com.objects_detector.trackers.ColorTrackerLockSingleObject.ColorTrackerLockSingleObject;
@@ -15,6 +18,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
 
 public class Controller implements ObjectDetectorListener
 {
@@ -74,7 +80,7 @@ public class Controller implements ObjectDetectorListener
 	
 	private void startVideoStreaming() {
 		Utilities.imageViewProperties(this.originalFrame, 400);
-		Detector detector = new Detector(0);
+		StreamDetector detector = new StreamDetector(0);
 		detector.addListener(this);
 		detector.start();
 	}
@@ -85,7 +91,7 @@ public class Controller implements ObjectDetectorListener
 		Utilities.imageViewProperties(this.maskImage, 200);
 		Utilities.imageViewProperties(this.morphImage, 200);		
 		
-		Detector detector = new Detector(0);
+		StreamDetector detector = new StreamDetector(0);
 		MovmentTracker tracker = new MovmentTracker(dilatePixelSize.getValue(), erodePixelSize.getValue());
 		detector.setTracker(tracker);
 		detector.addListener(this);
@@ -108,7 +114,7 @@ public class Controller implements ObjectDetectorListener
 		Utilities.imageViewProperties(this.maskImage, 200);
 		Utilities.imageViewProperties(this.morphImage, 200);		
 		
-		Detector detector = new Detector(0);
+		StreamDetector detector = new StreamDetector(0);
 		ColorTracker tracker = new ColorTrackerLockSingleObject(hueStart.getValue(), hueStop.getValue(), saturationStart.getValue(), 
 												saturationStop.getValue(), valueStart.getValue(), valueStop.getValue(), 
 												dilatePixelSize.getValue(), erodePixelSize.getValue(), speed.getValue());
@@ -145,5 +151,14 @@ public class Controller implements ObjectDetectorListener
 		Utilities.onFXThread(this.originalFrame.imageProperty(), frameProcessResult.getFinalImage());
 		if (frameProcessResult.getDetectedObjects().size() != 0)
 			System.err.println(frameProcessResult.getDetectedObjects().get(0).getCenter().toString() + " !! ");
-	}	
+	}
+
+
+	@FXML
+	public void openVideo(ActionEvent actionEvent) {
+		Utilities.imageViewProperties(this.originalFrame, 400);
+		VideoSrcDetector detector = new VideoSrcDetector("C:\\Users\\taljmars\\Desktop\\1280.wmv");
+		detector.addListener(this);
+		detector.start();
+	}
 }
